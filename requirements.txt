@@ -1,0 +1,6 @@
+Flask
+PyMuPDF
+sumy
+nltk
+numpy
+gunicorn

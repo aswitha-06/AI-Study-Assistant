@@ -1,0 +1,411 @@
+/* =====================================
+   AI Smart Study Assistant
+   Professional UI
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    background:#eef3fb;
+    color:#333;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+
+.navbar{
+    background:linear-gradient(135deg,#0d6efd,#4f46e5)!important;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:700;
+}
+
+/* ======================
+   HERO
+====================== */
+
+.hero{
+    background:linear-gradient(135deg,#0d6efd,#4f46e5);
+    color:#fff;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:.95;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+/* ======================
+   FILE INPUT
+====================== */
+
+#pdfFile{
+    max-width:550px;
+    margin:auto;
+    border-radius:12px;
+    padding:12px;
+}
+
+/* ======================
+   BUTTONS
+====================== */
+
+.btn{
+    border-radius:10px;
+    transition:.3s ease;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ======================
+   CARDS
+====================== */
+
+.card{
+    border:none;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.card-body{
+    padding:28px;
+}
+
+.card h1{
+    font-size:40px;
+}
+
+.card p{
+    font-weight:600;
+}
+
+/* ======================
+   PDF DASHBOARD
+====================== */
+
+#fileName,
+#pageCount,
+#wordCount,
+#characterCount{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* ======================
+   SEARCH
+====================== */
+
+#searchBox{
+    border-radius:12px 0 0 12px;
+    border:2px solid #0d6efd;
+}
+
+#searchBtn{
+    border-radius:0 12px 12px 0;
+}
+
+/* ======================
+   EXTRACTED NOTES
+====================== */
+
+#pdfText{
+    background:#fafcff;
+    border:1px solid #d8e3f7;
+    border-radius:15px;
+    padding:20px;
+    line-height:1.8;
+    white-space:pre-wrap;
+    max-height:450px;
+    overflow-y:auto;
+}
+
+#pdfText::-webkit-scrollbar{
+    width:8px;
+}
+
+#pdfText::-webkit-scrollbar-thumb{
+    background:#0d6efd;
+    border-radius:20px;
+}
+
+/* ======================
+   MARK
+====================== */
+
+mark{
+    background:#ffe66d;
+    color:#000;
+    padding:2px 4px;
+    border-radius:4px;
+}
+
+/* ======================
+   SUMMARY
+====================== */
+
+#summaryText{
+    line-height:1.8;
+}
+
+/* ======================
+   QUIZ
+====================== */
+
+#quizArea .card{
+    margin-bottom:20px;
+}
+/* ======================
+   FOOTER
+====================== */
+
+footer{
+    margin-top:70px;
+    background:#0b1220;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+/* ======================
+   FADE ANIMATION
+====================== */
+
+.card,
+.btn{
+    animation:fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ======================
+   DARK MODE
+====================== */
+
+.dark-mode{
+    background:#1e293b !important;
+    color:white !important;
+}
+
+.dark-mode .navbar{
+    background:#111827 !important;
+}
+
+.dark-mode .hero{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+.dark-mode section,
+.dark-mode .card,
+.dark-mode .card-body{
+    background:#263243 !important;
+    color:white !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode span,
+.dark-mode label,
+.dark-mode li,
+.dark-mode strong{
+    color:white !important;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode .form-control{
+    background:#374151 !important;
+    color:white !important;
+    border:1px solid #4b5563;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder{
+    color:#d1d5db;
+}
+
+.dark-mode #searchBox{
+    background:#374151 !important;
+    color:white !important;
+}
+
+.dark-mode #pdfText{
+    background:#1f2937 !important;
+    color:white !important;
+    border:1px solid #4b5563;
+}
+
+.dark-mode mark{
+    background:#facc15;
+    color:black;
+}
+
+.dark-mode .btn-light{
+    background:#374151;
+    color:white;
+    border:none;
+}
+
+.dark-mode .alert-success{
+    background:#14532d;
+    color:white;
+}
+
+.dark-mode .alert-danger{
+    background:#7f1d1d;
+    color:white;
+}
+
+/* ======================
+   SCROLLBAR
+====================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#dbe4f3;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#6b7280;
+    border-radius:20px;
+}
+
+.dark-mode ::-webkit-scrollbar-track{
+    background:#1f2937;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb{
+    background:#64748b;
+}
+
+/* ======================
+   LOADING SPINNER
+====================== */
+
+#loadingBox{
+    margin-top:20px;
+}
+
+.spinner-border{
+    width:3rem;
+    height:3rem;
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+
+@media(max-width:768px){
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    #pdfFile{
+        max-width:100%;
+    }
+
+    .card{
+        margin-bottom:18px;
+    }
+
+    .card-body{
+        padding:20px;
+    }
+
+    .card h1{
+        font-size:34px;
+    }
+
+    #pdfText{
+        max-height:300px;
+        font-size:14px;
+    }
+
+    .navbar-brand{
+        font-size:18px;
+    }
+
+    .btn{
+        width:100%;
+        margin-top:8px;
+    }
+
+}
+
+/* ======================
+   EXTRA POLISH
+====================== */
+
+.card-title{
+    font-weight:700;
+}
+
+.alert{
+    border-radius:12px;
+}
+
+input:focus,
+textarea:focus,
+button:focus{
+    box-shadow:none !important;
+    outline:none !important;
+}
